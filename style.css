@@ -1,4 +1,6 @@
-/* Загальні стилі та скидання */
+/* 🌈🎸🌞 Стиль міксований: Фестиваль + Світло + Рок */
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +8,13 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    background-color: #0e0e0e;
+    color: #eee;
 }
 
+/* Layout */
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -24,82 +27,42 @@ body {
     padding: 0 20px;
 }
 
+/* Посилання */
 a {
-    color: #007bff;
+    color: #00eaff;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #ff00d4;
+    text-shadow: 0 0 5px #ff00d4;
 }
 
+/* Кнопки */
 .button {
     display: inline-block;
-    background-color: #ff5722; /* Помаранчевий колір, схожий на Concert.ua */
+    background: linear-gradient(135deg, #ff00d4, #00eaff);
     color: #fff;
     padding: 12px 25px;
-    border-radius: 5px;
+    border-radius: 8px;
     text-transform: uppercase;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 212, 0.4);
 }
 
 .button:hover {
-    background-color: #e64a19;
-    text-decoration: none;
+    background: linear-gradient(135deg, #00eaff, #ff00d4);
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
 }
 
 /* Header */
 .header {
-    background-color: #222; /* Темний фон, як на Concert.ua */
-    color: #fff;
+    background-color: #1a1a1a;
     padding: 15px 0;
-    position: relative;
+    color: #fff;
     z-index: 100;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Для мобільної адаптивності */
-}
-
-.logo img {
-    height: 50px; /* Розмір вашого логотипу */
-    width: auto;
-    /* Якщо ваш логотип - це біле коло з чорним трикутником, можна спробувати це зробити через CSS: */
-    /* .custom-logo {
-        width: 50px;
-        height: 50px;
-        background-color: white;
-        border-radius: 50%;
-        position: relative;
-    }
-    .custom-logo::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(180deg);
-        width: 0;
-        height: 0;
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-top: 25px solid black;
-    }
-    .custom-logo::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 5px;
-        height: 5px;
-        background-color: black;
-        border-radius: 50%;
-    } */
 }
 
 .nav ul {
@@ -113,50 +76,33 @@ a:hover {
 
 .nav ul li a {
     color: #fff;
-    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 .nav ul li a:hover {
-    color: #ff5722; /* Колір при наведенні */
-    text-decoration: none;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
 }
 
-.social-icons .instagram-icon {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin-left: 20px;
+.logo img {
+    height: 50px;
+    width: auto;
 }
 
 .burger-menu {
-    display: none; /* Приховано на десктопі */
-    flex-direction: column;
-    cursor: pointer;
-    padding: 5px;
+    display: none;
 }
 
-.burger-menu span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin-bottom: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Hero Section */
+/* Hero */
 .hero-section {
     position: relative;
-    width: 100%;
-    height: 600px; /* Висота hero секції */
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     overflow: hidden;
     color: #fff;
-    text-align: center;
 }
 
 .hero-video {
@@ -165,16 +111,12 @@ a:hover {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
     transform: translate(-50%, -50%);
-    background-size: cover;
-    filter: brightness(0.6); /* Затемнення відео для кращої читабельності тексту */
+    z-index: -1;
+    filter: brightness(0.5);
 }
 
 .hero-content {
-    position: relative;
     z-index: 1;
     padding: 20px;
     max-width: 800px;
@@ -182,28 +124,30 @@ a:hover {
 
 .hero-content h1 {
     font-size: 3.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ff00d4;
 }
 
 .hero-content p {
     font-size: 1.5em;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    color: #00eaff;
+    text-shadow: 0 0 5px #00eaff;
 }
 
-/* Content Section */
+/* Content */
 .content-section {
     background-color: #fff;
+    color: #000;
     padding: 40px;
     margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.content-section h1, .content-section h2, .content-section h3, .content-section h4 {
+.content-section h1,
+h2,
+h3 {
     color: #222;
-    margin-bottom: 20px;
 }
 
 .content-section p {
@@ -211,46 +155,11 @@ a:hover {
     line-height: 1.8;
 }
 
-.content-section ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
-    list-style: disc;
-}
-
-.content-section ul li {
-    margin-bottom: 8px;
-}
-
-.artist-list ul {
-    list-style: none; /* Забираємо маркери для списку артистів */
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.artist-list ul li {
-    background-color: #eee;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 0; /* Перезаписуємо попередній стиль */
-}
-
-/* Gallery Section */
+/* Gallery */
 .gallery-section {
-    background-color: #fff;
+    background: #111;
     padding: 40px;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.gallery-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #222;
+    color: #fff;
 }
 
 .image-grid {
@@ -263,177 +172,42 @@ a:hover {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .image-grid img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff00d4;
 }
 
 /* Footer */
 .footer {
-    background-color: #222;
+    background-color: #121212;
     color: #fff;
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
-    margin-top: auto; /* Притискає футер до низу */
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+.footer a {
+    color: #00eaff;
 }
 
-.footer-links, .brand-logos {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
+.footer a:hover {
+    color: #ff00d4;
 }
 
-.footer-links h3, .brand-logos h3 {
-    color: #ff5722;
-    margin-bottom: 15px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #ff5722;
-    text-decoration: underline;
-}
-
-.brand-logos img {
-    height: 40px; /* Розмір логотипів брендів */
-    margin: 0 10px 10px 0;
-    transition: transform 0.3s ease;
-}
-
-.brand-logos img:hover {
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    flex-basis: 100%;
-    margin-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-}
-
-/* Адаптивність для мобільних пристроїв */
+/* Адаптивність */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav {
-        width: 100%;
-        order: 3; /* Переміщуємо навігацію під логотип та соціальні іконки на мобільних */
-    }
-
-    .nav ul {
-        flex-direction: column;
-        width: 100%;
-        display: none; /* Приховано за замовчуванням */
-        margin-top: 15px;
-    }
-
-    .nav ul.active {
-        display: flex; /* Показуємо при активному бургер-меню */
-    }
-
-    .nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .burger-menu {
-        display: flex; /* Показуємо бургер-меню на мобільних */
-        position: absolute;
-        top: 25px;
-        right: 20px;
-    }
-
-    .burger-menu.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    .burger-menu.open span:nth-child(2) {
-        opacity: 0;
-    }
-    .burger-menu.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .social-icons {
-        order: 2;
-        margin-left: auto; /* Притискаємо до правого краю */
-        margin-top: 10px; /* Відступ від лого */
-    }
-
     .hero-content h1 {
         font-size: 2.2em;
     }
 
     .hero-content p {
-        font-size: 1.1em;
-    }
-
-    .content-section, .gallery-section {
-        padding: 20px;
-        margin: 15px auto;
+        font-size: 1.2em;
     }
 
     .image-grid {
-        grid-template-columns: 1fr; /* Один стовпець на мобільних */
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links, .brand-logos {
-        text-align: center;
-        width: 100%;
-        min-width: unset;
-    }
-
-    .brand-logos img {
-        margin: 5px; /* Менші відступи між логотипами на мобільних */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        height: 400px; /* Зменшуємо висоту hero на дуже малих екранах */
-    }
-
-    .hero-content h1 {
-        font-size: 1.8em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    .button {
-        padding: 10px 20px;
-        font-size: 0.9em;
+        grid-template-columns: 1fr;
     }
 }
